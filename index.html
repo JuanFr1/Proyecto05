@@ -184,10 +184,40 @@
             <h6 class="mb-0 text-center"><strong>Latitud - Longitud - Nivel del Mar</strong></h6>
           </div>
           <div class="card-body">
-            <canvas class="my-4 w-100" id="myChart" height="380"></canvas>
+            <canvas class="my-4 w-100" id="myChart2" height="380"></canvas>
+          </div>
+          <div class="card-body">
+            <canvas class="my-4 w-100" id="myChart3" height="380"></canvas>
           </div>
         </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+        <!--
+        <script>
+          const ctx = document.getElementById('myChart');
+        
+          new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+              datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
       </section>
+    -->
       <!-- Section: Main chart -->
 
       <!--Section: Sales Performance KPIs-->
@@ -297,7 +327,7 @@
                     <i class="fas fa-pencil-alt text-info fa-3x"></i>
                   </div>
                   <div class="text-end">
-                    <h3 id="Unidad">Celcius (C°)</h3>
+                    <h3 id="unidad">Celcius (C°)</h3>
                     <p class="mb-0">Unidad de Temperatura</p>
                   </div>
                 </div>
@@ -312,8 +342,8 @@
                     <i class="far fa-comment-alt text-warning fa-3x"></i>
                   </div>
                   <div class="text-end">
-                    <h3>Mph</h3>
-                    <p class="mb-0">Unidad de velocidad del viento</p>
+                    <h3 id="elevation">0</h3>
+                    <p class="mb-0">Elevación</p>
                   </div>
                 </div>
               </div>
@@ -327,8 +357,8 @@
                     <i class="fas fa-chart-line text-success fa-3x"></i>
                   </div>
                   <div class="text-end">
-                    <h3>64.89 %</h3>
-                    <p class="mb-0">Bounce Rate</p>
+                    <h3 id="latitude">0</h3>
+                    <p class="mb-0">Latitud</p>
                   </div>
                 </div>
               </div>
@@ -342,8 +372,8 @@
                     <i class="fas fa-map-marker-alt text-danger fa-3x"></i>
                   </div>
                   <div class="text-end">
-                    <h3>423</h3>
-                    <p class="mb-0">Total Visits</p>
+                    <h3 id="longitude">0</h3>
+                    <p class="mb-0">Longitud</p>
                   </div>
                 </div>
               </div>
@@ -356,8 +386,8 @@
               <div class="card-body">
                 <div class="d-flex justify-content-between px-md-1">
                   <div>
-                    <h3 class="text-danger">278</h3>
-                    <p class="mb-0">New Projects</p>
+                    <h3 class="time_format">-</h3>
+                    <p class="mb-0">Formato del tiempo</p>
                   </div>
                   <div class="align-self-center">
                     <i class="fas fa-rocket text-danger fa-3x"></i>
