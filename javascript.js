@@ -54,8 +54,11 @@ let load = (data) => {
   let unidadHTML = document.getElementById('unidad')
 
   timezoneHTML.textContent = timezone
-  elevationHTML.textContent = elevation  
-  
+  elevationHTML.textContent = elevation
+  latitudeHTML.textContent = latitude
+  longitudeHTML.textContent = longitude
+  time_formatHTML.textContent = time_format  
+  //timezone_abbreviationHTML.textContent = timezone_abbreviation
   unidadHTML.textContent = unidad
 
 
